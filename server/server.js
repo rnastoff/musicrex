@@ -5,9 +5,9 @@ const app = express();
 const publicPath = path.join(__dirname, "..", "public");
 const port = process.env.PORT || 3000;
 
-app.use(express.static(publicPath));
+app.use(express.static(publicPath)).use(cors());
 
-app.use(cors());
+
 
 app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', 'https://musicrex.herokuapp.com/');
@@ -17,6 +17,8 @@ app.use(function (req, res, next) {
     next();
 });
 
+app.use(cors());
+app.options('*', cors());
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(publicPath, 'index.html'));
