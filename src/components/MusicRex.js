@@ -16,9 +16,7 @@ class Musicrex extends React.Component {
 
   getRecommendations = (band) => {
     const numberOfResults = 50;
-    fetch(`https://tastedive.com/api/similar?q=${band}&limit=${numberOfResults}&info=1&k=308154-Test-7CWGEKQA`, {
-        mode: 'no-cors'
-      })
+    fetch(`https://tastedive.com/api/similar?q=${band}&limit=${numberOfResults}&info=1&k=308154-Test-7CWGEKQA`)
       .then(response => response.json())
       .then(data => {
         if (data.Similar.Info[0].Type === "unknown") {
