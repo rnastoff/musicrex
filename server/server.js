@@ -7,6 +7,17 @@ const port = process.env.PORT || 3000;
 
 app.use(express.static(publicPath));
 
+const cors = require('cors');
+const corsOptions = {
+  origin: 'https://musicrex.herokuapp.com/',
+  optionsSuccessStatus: 200
+}
+app.use(cors(corsOptions));
+app.options('*', cors());
+app.use('/', routes);
+
+
+
 
 
 app.get('*', (req, res) => {
