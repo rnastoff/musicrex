@@ -1,0 +1,89 @@
+
+header {
+  background: #2a2a2a;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 15px;
+}
+.header-container {
+  margin: 0 auto;
+  width: 1000px;
+}
+.header-container::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.header-title {
+  color: #f75d5b;
+  font-size: 24px;
+  font-weight: 700;
+  float: left;
+  line-height: 30px;
+}
+form {
+  float: right;
+}
+input {
+  background: #191919;
+  box-sizing: border-box;
+  border: 0px;
+  color: #fff;
+  float: left;
+  padding: 10px;
+  height: 30px;
+  width: 300px;
+  outline: none;
+}
+button {
+  background: #f75d5b;
+  border: 0px;
+  float: right;
+  height: 30px;
+  outline: none;
+  transition: background 0.5s;
+  width: 50px;
+}
+button:hover {
+  background: #cc4d4b;
+	cursor: pointer;
+  transition: background 0.5s
+}
+.fa-search {
+  color: #fff;
+  font-size: 18px;
+  padding: 0px 0px 3px 0px;
+}
+
+
+@media only screen and (max-width: 1040px) {
+  .header-container {
+    width: 700px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .header-container {
+    width: 100%;
+  }
+  .header-title {
+    display: block;
+    float: none;
+    font-size: 24px;
+    text-align: center;
+  }
+  form {
+    display: block;
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+  }
+  input {
+    float: none;
+    margin: 0 auto;
+    width: 200px;
+  }
+  button {
+    float: none;
+  }
+}

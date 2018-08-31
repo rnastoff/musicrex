@@ -1,0 +1,21 @@
+.recommendations {
+  margin: 20px auto 0 auto;
+  width: 100%;
+}
+.rec-title {
+  background: #2a2a2a;
+  color: #f75d5b;
+  font-size: 20px;
+  padding: 15px;
+}
+.rec-list {
+  list-style: none;
+  margin-top: 10px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 540px) {
+  .rec-title {
+    text-align: center;
+  }
+}

@@ -1,0 +1,43 @@
+.rec-list li {
+  background: #191919;
+  display: inline-block;
+  font-weight: bold;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.rec-list li:hover {
+  cursor: pointer;
+}
+.rec-list li i {
+  background: #333;
+  color: #fff;
+  font-size: 20px;
+  padding: 15px;
+}
+h3 {
+  color: #fff;
+  font-size: 18px;
+  float: right;
+  padding: 14px 20px 14px 20px;
+}
+.fa-music {
+  background: #2a2a2a;
+  color: #f75d5b;
+  font-size: 20px;
+  padding: 15px;
+}
+
+@media only screen and (max-width: 540px) {
+  .rec-list li {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .rec-list li i {
+    display: inline-block;
+  }
+  h3 {
+    display: inline-block;
+    float: none;
+    font-size: 15px;
+  }
+}
