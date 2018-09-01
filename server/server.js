@@ -8,7 +8,7 @@ const port = process.env.PORT || 3000;
 app.use(express.static(publicPath));
 
 const corsOptions = {
-  origin: 'https://musicrex.herokuapp.com/',
+  origin: 'https://tastedive.com/',
   optionsSuccessStatus: 200
 }
 app.use(cors(corsOptions));
