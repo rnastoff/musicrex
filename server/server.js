@@ -11,7 +11,7 @@ const corsOptions = {
   origin: 'https://tastedive.com/',
   optionsSuccessStatus: 200
 }
-app.use(cors(corsOptions));
+app.use(cors());
 app.options('*', cors());
 // app.use('/', routes);
 
