@@ -16,6 +16,15 @@ app.options('*', cors());
 app.use(express.static(publicPath));
 
 
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "https://musicrex.herokuapp.com/");
+    res.header("Access-Control-Allow-Credentials", "true");
+    res.header("Access-Control-Allow-Headers", "Origin,Content-Type, Authorization, x-id, Content-Length, X-Requested-With");
+    res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+    next();
+});
+
+
 app.get('*', (req, res) => {
   res.sendFile(path.join(publicPath, 'index.html'));
 });
